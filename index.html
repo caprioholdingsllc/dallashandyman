@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFW Handyman Pros | How We Handle Home Repair Projects</title>
+    <meta name="description" content="Professional handyman services in Dallas-Fort Worth. Clear process from quote to completion. Small repairs to full projects.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+            color: white;
+            padding: 1rem 2rem;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .phone {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .hero {
+            background: #d97706;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .process-intro {
+            max-width: 900px;
+            margin: 0 auto 3rem auto;
+            text-align: center;
+        }
+        .process-intro h2 {
+            color: #b45309;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .process-intro p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+        .process-section {
+            background: #fffbeb;
+            padding: 3rem 2rem;
+            margin: 0 -2rem 3rem -2rem;
+        }
+        .process-section h2 {
+            text-align: center;
+            color: #b45309;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .process-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            position: relative;
+            border-top: 4px solid #d97706;
+        }
+        .process-step .step-number {
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            background: #b45309;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .process-step h3 {
+            color: #b45309;
+            margin-top: 1rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+        }
+        .process-step .timeline {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .process-step p {
+            color: #666;
+            line-height: 1.7;
+        }
+        .services-section {
+            margin: 3rem 0;
+        }
+        .services-section h2 {
+            color: #b45309;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .service-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid #d97706;
+        }
+        .service-card h3 {
+            color: #b45309;
+            margin-bottom: 0.75rem;
+        }
+        .service-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        .availability-section {
+            background: white;
+            padding: 3rem 2rem;
+            margin: 3rem -2rem;
+            border-top: 3px solid #d97706;
+            border-bottom: 3px solid #d97706;
+        }
+        .availability-section h2 {
+            text-align: center;
+            color: #b45309;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .availability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .availability-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: #fffbeb;
+            border-radius: 8px;
+        }
+        .availability-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .availability-card h3 {
+            color: #b45309;
+            margin-bottom: 0.5rem;
+        }
+        .availability-card .time {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #d97706;
+            margin: 0.5rem 0;
+        }
+        .form-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 3rem auto;
+        }
+        .form-section h2 {
+            color: #b45309;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+        .form-section .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #d97706;
+        }
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            opacity: 0.95;
+        }
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">DFW Handyman Pros</div>
+            <div class="phone">📞 (972) 284-0913</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>How We Handle Home Repair Projects</h1>
+        <p>A straightforward process from your first call to project completion.</p>
+    </section>
+
+    <div class="container">
+        <div class="process-intro">
+            <h2>Our Step-by-Step Process</h2>
+            <p>We've streamlined our handyman service to be simple and predictable. You'll know what to expect at every stage, from getting a quote to completing your repairs.</p>
+        </div>
+
+        <section class="process-section">
+            <h2>From Call to Completion</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Initial Contact</h3>
+                    <div class="timeline">⏱️ Same Day</div>
+                    <p>Call or submit your request. We'll discuss your project and schedule an estimate visit if needed. Small jobs often quoted over the phone.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Quote & Scheduling</h3>
+                    <div class="timeline">⏱️ 1-2 Days</div>
+                    <p>We provide a detailed quote with labor and materials. Once approved, we schedule your project—often within the same week for smaller jobs.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Project Work</h3>
+                    <div class="timeline">⏱️ 2 Hours - 2 Days</div>
+                    <p>Our handyman arrives with tools and materials. Most projects completed same-day. Larger projects may span multiple days.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Walkthrough & Payment</h3>
+                    <div class="timeline">⏱️ Day of Completion</div>
+                    <p>Review completed work together. Payment due upon completion. We accept cash, check, and credit cards.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <h2>Handyman Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>General Repairs</h3>
+                    <p>Door repairs, drywall patching, trim work, and minor fixes around the home.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Fixture Installation</h3>
+                    <p>Light fixtures, ceiling fans, shelving, towel bars, and hardware installation.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Painting</h3>
+                    <p>Interior painting, touch-ups, trim painting, and small exterior jobs.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Assembly</h3>
+                    <p>Furniture assembly, play sets, grills, and equipment setup.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Carpentry</h3>
+                    <p>Door hanging, trim installation, minor deck repairs, and wood projects.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Tile Work</h3>
+                    <p>Small tile repairs, re-grouting, and bathroom tile work.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Exterior Work</h3>
+                    <p>Fence repairs, gate installation, minor siding work, and outdoor projects.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Honey-Do Lists</h3>
+                    <p>Multiple small projects completed in one visit. Great for rental turnovers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="availability-section">
+            <h2>Timeline Expectations</h2>
+            <div class="availability-grid">
+                <div class="availability-card">
+                    <div class="icon">📋</div>
+                    <h3>Quote Response</h3>
+                    <div class="time">Same Day</div>
+                    <p>Most quotes provided within hours of contact</p>
+                </div>
+                <div class="availability-card">
+                    <div class="icon">📅</div>
+                    <h3>Service Scheduling</h3>
+                    <div class="time">3-7 Days</div>
+                    <p>Small jobs often scheduled within a week</p>
+                </div>
+                <div class="availability-card">
+                    <div class="icon">⏰</div>
+                    <h3>Typical Project</h3>
+                    <div class="time">2-6 Hours</div>
+                    <p>Most handyman jobs completed same day</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Request Service</h2>
+            <p class="subtitle">Tell us about your handyman project</p>
+            
+            <form id="leadForm" action="https://hook.us2.make.com/gzcbxb8x2e5xph37kjhm48ur4khvh7ir" method="POST">
+                <input type="hidden" name="site_id" value="DFW-HANDY-001">
+                <input type="hidden" name="market" value="Dallas">
+                <input type="hidden" name="industry" value="Handyman">
+                <input type="hidden" name="lead_type" value="Service Request">
+                <input type="hidden" name="source_url" value="dfwhandymanpros.com">
+                
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Service Address *</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="project_type">Project Type *</label>
+                    <select id="project_type" name="project_type" required>
+                        <option value="">Select...</option>
+                        <option value="General Repairs">General Repairs</option>
+                        <option value="Installation">Installation</option>
+                        <option value="Painting">Painting</option>
+                        <option value="Carpentry">Carpentry</option>
+                        <option value="Assembly">Assembly</option>
+                        <option value="Multiple Projects">Multiple Projects</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="urgency">Timeline *</label>
+                    <select id="urgency" name="urgency" required>
+                        <option value="">Select...</option>
+                        <option value="This Week">This Week</option>
+                        <option value="Next Week">Next Week</option>
+                        <option value="Within 2 Weeks">Within 2 Weeks</option>
+                        <option value="Flexible">Flexible</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Project Details *</label>
+                    <textarea id="details" name="details" required placeholder="Describe what needs to be done..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Get Quote</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 DFW Handyman Pros. Professional Home Repairs.</p>
+    </footer>
+
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            }).then(() => {
+                window.location.href = 'thanks.html';
+            }).catch(() => {
+                window.location.href = 'thanks.html';
+            });
+        });
+    </script>
+</body>
+</html>
